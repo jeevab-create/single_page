@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./plugins/scss/index.css">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <div class="cls-dashboard">
+        <div class="container-fluid ">
+            <div class="cls-wrapper">
+                <!-- Sidebar -->
+                <nav id="sidebar" class="cls-sidebar">
+                    <div class="cls-navbar">
+                        <div class="cls-sidebar-header">
+                            <img src="./assets/assets-404/logo-dark.svg" alt="favicon image">
+                            <span class="cls-version">v1.2.0</span>
+                        </div>
+                        <ul class="list-unstyled cls-components">
+                            <!-- Menu items come from JavaScript -->
+                        </ul>
+                    </div>
+                </nav>
+                <!-- Main -->
+                <main>
+                    <div class="cls-content">
+                        <header id="cls-allOverHeader">
+                            <button type="button" id="sidebarCollapse" class="btn btn-info cls-sidebarCollapse">
+                                <i class="fas fa-arrow-left"></i>
+                            </button>
+                            <div class="container-fluid">
+                                <div class="row cls-content-header">
+                                    <div class="col-4 d-flex justify-content-between align-items-center">
+                                        <i class="fa-solid fa-bars"></i>
+                                        <div class="cls-searchbar">
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                            <input type="search" placeholder="Search...">
+                                            <div class="cls-ctrlk">ctrl+k</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 offset"></div>
+                                    <div class="col-5 d-flex justify-content-evenly align-items-center">
+                                        <div class="cls-nav-icons">
+                                            <i class="fa-brands fa-delicious"></i>
+                                            <i class="fa-regular fa-sun"></i>
+                                            <i class="fa-solid fa-gear"></i>
+                                            <i class="fa-solid fa-diamond"></i>
+                                            <div class="cls-notificationbell">
+                                                <i class="fa-regular fa-bell"></i>
+                                                <span
+                                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill">2</span>
+                                            </div>
+                                            <span><img src="./assets/assets-dashboard/avatar-1.jpg"
+                                                    class="cls-user-avatar" alt="avatar image"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                        </header>
+                        <div class="row" id="cls-allOverBreadscrum">
+                            <div class="cls-breadscrum mt-3">
+                                <span>Home</span>
+                                <span class="fa-solid fa-chevron-right"></span>
+                                <span>Dashboard</span>
+                                <span class="fa-solid fa-chevron-right"></span>
+                                <span class="cls-breadscrum-active" id="cls-breadscrum-current">Home</span>
+                            </div>
+                        </div>
+                        <div class="row mt-0 cls-home-title" id="cls-allOverHeading">
+                            <h2 id="cls-page-current">Home</h2>
+                        </div>
+                        <div class="cls-totalContent" id="totalContent"></div>
+                        <div class="modal fade" id="userModal" tabindex="-1">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="userModalLabel">Add/Edit User</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form id="userForm">
+                                            <input type="hidden" id="userId">
+                                            <div class="mb-3">
+                                                <label for="name" class="form-label">Name</label>
+                                                <input type="text" class="form-control" id="name" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="position" class="form-label">Position</label>
+                                                <input type="text" class="form-control" id="position" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="office" class="form-label">Office</label>
+                                                <input type="text" class="form-control" id="office" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="age" class="form-label">Age</label>
+                                                <input type="number" class="form-control" id="age" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="startDate" class="form-label">Start Date</label>
+                                                <input type="date" class="form-control" id="startDate" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="status" class="form-label">Status</label>
+                                                <select class="form-select" id="status" required>
+                                                    <option value="Active">Active</option>
+                                                    <option value="Disabled">Disabled</option>
+                                                </select>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary" id="saveUserBtn">Save</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <footer id="cls-allOverFooter">
+                            <div class="row">
+                                <div class="col-4"><span>Made by massJeeva</span></div>
+                                <div class="col-4 offset"></div>
+                                <div class="col-4 d-flex justify-content-evenly">
+                                    <span>Home</span>
+                                    <span>Documentation</span>
+                                    <span>Support</span>
+                                </div>
+                            </div>
+                        </footer>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <script src="./plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./plugins/bootstrap/js/jquery.js"></script>
+    <script src="./plugins/js/singlePage.js"></script>
+</body>
+
+</html>
+<!-- @import "_font.scss";
+@import "_mixins.scss";
+@import "_variables.scss";
+@import "_extends.scss";
+
+* {
+  font-family: map-get($fonts, regular);
+}
+
+.cls-dashboard {
+  .container-fluid {
+    padding: unset;
+
+    .cls-wrapper {
+      @include flex-center(row, flex-start, flex-start);
+      width: 100%;
+      @include transition();
+
+      &.horizontal {
+        flex-direction: column;
+
+        .cls-sidebar {
+          width: 100%;
+          height: 75px;
+          overflow: unset;
+
+          .cls-components {
+            @include flex-center(row, flex-start, center);
+            flex-wrap: nowrap;
+            padding-block: 8px;
+
+            >li {
+              flex: 1;
+              position: relative;
+              .fa-chevron-down{
+                display: none;
+              }
+            }
+
+            .submenu {
+              position: absolute;
+              min-width: 200px;
+              background: $white;
+              box-shadow: 0 2px 5px $box-shadow;
+            }
+          }
+
+          .cls-navheading,
+          .cls-sidebarCollapse {
+              display: none;
+          }
+        }
+
+        .cls-navbar {
+          @include flex-center(row, space-between, center);
+          padding-inline: 30px;
+          height: 79px;
+        }
+
+        .cls-sidebarCollapse {
+            display: none;
+        }
+      }
+
+      &.cls-error-toggle{
+        .cls-sidebar {
+          display: none;
+        }
+        .cls-content{
+          #cls-allOverHeader,  #cls-allOverBreadscrum , #cls-allOverHeading , #cls-allOverFooter{
+            display: none;
+          }
+        }
+      }
+      .cls-sidebar {
+        width: 290px;
+        background: $white;
+        color: $black;
+        overflow-y: scroll;
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        transform: translateX(0%);
+        @include transition();
+        z-index: 10;
+
+        &.collapsed {
+          width: 0;
+          overflow: hidden;
+          transform: translateX(-100%);
+          @include transition();
+        }
+
+        ul {
+          margin: unset;
+        }
+
+        .cls-components {
+          padding: 40px 8px;
+        }
+
+        .cls-navheading,
+        .cls-sidebarCollapse {
+          display: block;
+        }
+      }
+
+      .cls-sidebar-header {
+        img {
+          height: 25px;
+        }
+
+        .cls-version {
+          background-color: $version;
+          @include font-style(bold, 0.7rem, $white);
+          padding: 4px 7px;
+          border-radius: 15px;
+          margin-left: 5px;
+        }
+      }
+
+      .cls-navheading {
+        @include font-style(regular, 0.8rem);
+        padding-block: 5px;
+      }
+
+      .cls-components {
+        padding-block: 20px;
+        border-bottom: 1px solid $white;
+
+        li {
+          color: $gray;
+
+          a {
+            padding: 15px;
+            @include font-style(regular, 0.9rem, $gray);
+            @include flex-center(row, flex-start, center);
+            text-decoration: none;
+            @include transition();
+
+            span {
+              margin-left: 15px;
+            }
+
+            &:hover {
+              color: $hover;
+            }
+
+            &.active {
+              background: $light-blue;
+              color: $blue;
+              border-radius: 8px;
+              @include transition();
+            }
+          }
+
+          &:hover {
+            color: $hover;
+          }
+
+          ul li {
+            list-style: disc;
+
+            a {
+              padding-block: 15px;
+              padding-inline: 0;
+            }
+          }
+        }
+      }
+
+      .cls-navbar {
+        padding: 25px;
+      }
+
+      .cls-nav-icons {
+        @include flex-center(row, space-between, center);
+        width: 70%;
+        margin-left: 28%;
+        font-size: 1.3rem;
+        color: $blue-dark;
+
+        .cls-notificationbell {
+          position: relative;
+
+          span {
+            background-color: $dark-green;
+            font-size: 0.7rem;
+          }
+        }
+      }
+
+      .cls-user-avatar {
+        border-radius: 20px;
+        width: 40px;
+        height: 40px;
+      }
+
+      .submenu {
+        display: none;
+        @include transition();
+
+        &.show {
+          display: block;
+          @include transition();
+          margin-left: 20px;
+          border-left: 1px solid $gray-light;
+        }
+      }
+    }
+
+    main {
+      flex: 1;
+      width: 100%;
+    }
+
+    .cls-content {
+      padding: 20px 40px;
+      background-color: $background-light;
+      @include transition();
+
+      .cls-sidebarCollapse {
+        position: fixed;
+        top: 25px;
+        right: -20px;
+        left: 275px;
+        z-index: 11;
+        background-color: $white;
+        border: none;
+        border-radius: 15px;
+        width: 30px;
+        height: 30px;
+        @include transition();
+        @include flex-center();
+        box-shadow: 0 0 5px $box-shadow;
+      }
+
+      .cls-collapsed {
+        left: -13px;
+        transform: rotate(180deg);
+      }
+
+      .cls-expanded {
+        left: 235px;
+      }
+
+      .cls-breadscrum {
+        padding-top: 40px;
+        @include font-style(regular, 0.8rem, $gray);
+        @include flex-center(row, flex-start, baseline);
+        gap: 12px;
+        width: 25%;
+
+        .cls-breadscrum-active {
+          color: $gray-breadscrum;
+        }
+      }
+
+      .cls-home-title {
+        @include flex-center(row, space-between, center);
+
+        h2 {
+          @include font-style(bold, 2rem);
+        }
+
+        span {
+          color: $add-user;
+          cursor: pointer;
+          font-size: 1rem;
+        }
+      }
+
+      .cls-content-header {
+        .col-4 {
+          i {
+            font-size: 1.3rem;
+            color: $blue-dark;
+          }
+        }
+
+        .cls-searchbar {
+          @include flex-center(row, "", center);
+          border-radius: 10px;
+          padding-block: 3px;
+          background-color: $white;
+          width: 85%;
+          border: 1px solid $gray-light;
+          margin-right: 8px;
+
+          i {
+            font-size: 1.1rem;
+            padding: 10px 8px 10px 15px;
+            color: $gray-light;
+          }
+
+          input {
+            border: none;
+            outline: 0;
+            width: 65%;
+
+            &::placeholder {
+              @include font-style(medium, 0.9rem, $gray-light);
+            }
+          }
+
+          .cls-ctrlk {
+            margin: 6px;
+            padding: 3px 7px;
+            background-color: $blue-dark;
+            @include font-style(regular, 0.7rem, $white);
+            border-radius: 6px;
+          }
+        }
+      }
+
+      .cls-productprice-filter {
+        .cls-pricefiler {
+          cursor: pointer;
+          background-color: $white;
+          @include font-style(regular, 0.9rem, $gray);
+          border-radius: 10px;
+          border: none;
+
+         
+
+          i {
+            font-size: 0.9rem;
+            color: $gray;
+            margin-left: 5px;
+          }
+        }
+
+        .cls-productfilter {
+          cursor: pointer;
+
+          i {
+            font-size: 0.9rem;
+          }
+
+          span {
+            font-size: 0.9rem;
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+    .cls-pricefiler-select{
+      height: 50px;
+      border-radius: 8px;
+      color: $gray;
+    }
+    .cls-date-sales {
+      @include flex-center(row, space-between, center);
+      padding: unset;
+
+      .cls-card {
+        @extend %card-base;
+        margin: 12px;
+
+        &.cls-bg-gradients-dark {
+          background: $marked-bg;
+          color: $white;
+          .cls-bg-gradients-dark {
+            background : $white;
+            border-radius: 10px;
+          }
+        }
+
+        .cls-card-body {
+          padding: 1.5rem;
+          background-repeat: no-repeat;
+          background-position: 100% 0%;
+          background-size: 50%;
+
+          .cls-card-title {
+            @include font-style(semibold, 1rem);
+          }
+
+          .cls-salesbadge {
+            @include font-style(regular, 0.7rem, $blue);
+            background-color: $light-blue;
+          }
+
+          .cls-sales-amount {
+            @include font-style(regular, 1.5rem);
+          }
+
+          .cls-sales-increase {
+            font-size: 0.9rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 1rem;
+          }
+
+          .cls-card-text {
+            @include font-style(regular, 0.7rem, $gray);
+            margin: unset;
+          }
+          .cls-bg-gradients {
+            background: $marked-bg;
+            border-radius: 10px;
+          }
+
+          .progress {
+            height: 6px;
+            margin-top: 0;
+          }
+        }
+      }
+    }
+
+    .cls-map-grap {
+      padding: unset;
+
+      .cls-card {
+        padding: 10px;
+        background-color: $white;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px $box-shadow;
+        position: relative;
+        height: auto;
+        margin-bottom: 20px;
+
+        .cls-image-container {
+          width: 100%;
+          height: auto;
+          overflow: hidden;
+          position: relative;
+
+          .cls-mapimg {
+            padding-inline: 30px;
+            width: 100%;
+            cursor: pointer;
+            padding-block: 55px;
+            transition: transform 0.3s ease;
+            transform-origin: center;
+          }
+        }
+
+        .text-muted {
+          font-size: 0.8rem;
+        }
+
+        .cls-burnupchart {
+          padding-inline: 10px;
+        }
+
+        .cls-imgearn {
+          padding-inline: 10px;
+          @include flex-center();
+
+          img {
+            width: 90%;
+          }
+        }
+
+        .cls-earnings {
+          padding-left: 30px;
+          width: 50%;
+
+          .cls-icon-bgandcolor {
+            color: $yellowicon;
+            background-color: $yellowicon-bg;
+            @include flex-center();
+          }
+
+          .cls-icon-bgandcolors {
+            color: $red;
+            background-color: $light-red;
+            @include flex-center();
+            @extend %icon-base;
+          }
+        }
+
+        .cls-zoomicon {
+          border-radius: 5px;
+          height: 15px;
+          width: 15px;
+          position: absolute;
+          z-index: 10;
+          background-color: $black;
+          font-size: 0.8rem;
+          @include font-style(bold, 0.8rem, $white);
+          margin: 5px;
+          margin-inline: 30px;
+          cursor: pointer;
+          @include flex-center();
+        }
+
+        p {
+          margin: unset;
+        }
+
+        span {
+          font-size: 0.9rem;
+          @include flex-center(row, space-between, center);
+          color: $gray;
+        }
+
+        .cls-totalIdeaAndLoc {
+          @include font-style(medium, inherit, $black);
+        }
+
+        .cls-border-bottom {
+          border-bottom: 1px solid $gray-dark;
+          padding: 20px;
+        }
+
+        .cls-icon-bgandcolor {
+          @extend %icon-base;
+          background-color: $light-blue;
+          color: $blue;
+        }
+
+        .cls-total-ideas {
+          span {
+            padding: 0;
+          }
+        }
+      }
+    }
+
+    .cls-social-likes {
+      padding: unset;
+
+      .cls-card {
+        @extend %card-base;
+        margin: 10px;
+        overflow: hidden;
+      }
+
+      .cls-card-body {
+        padding: 25px;
+        background-repeat: no-repeat;
+        background-position: 100% 0%;
+        background-size: 50%;
+
+        .text-muted {
+          font-size: 0.9rem;
+        }
+      }
+
+      .cls-social-icon {
+        font-size: 2rem;
+        margin-right: 10px;
+      }
+
+      .cls-likes-count {
+        @include font-style(medium, 1rem);
+      }
+
+      .cls-likes-increase {
+        font-size: 0.7rem;
+        padding: 4px 5px;
+        border-radius: 5px;
+        background-color: $dark-green;
+      }
+
+      .cls-stats-row {
+        margin-top: 1rem;
+        padding-top: 45px;
+
+        .text-center {
+          padding: unset;
+        }
+
+        .cls-borderleft {
+          border-right: 1px solid $gray-dark;
+        }
+      }
+
+      .cls-stats-label {
+        @include font-style(regular, 0.9rem, $gray);
+      }
+
+      .cls-stats-value {
+        @include font-style(medium, 1rem);
+      }
+    }
+
+    .cls-recentUsersCards {
+      @include flex-center(row, flex-start, flex-start);
+      padding: unset;
+
+      .cls-card {
+        margin: 10px;
+        @extend %card-base;
+      }
+
+      .cls-card-body {
+        padding: 10px 30px 15px;
+      }
+
+      .cls-card-header {
+        background-color: transparent;
+        border-bottom: 1px solid $gray-dark;
+        @include font-style(medium, 0.9rem);
+        padding: 20px;
+      }
+
+      .cls-rating-number {
+        @include font-style(semibold, 2rem);
+      }
+
+      .cls-star-rating {
+        color: $star;
+        font-size: 1.5rem;
+      }
+
+      .cls-star-ratings {
+        .cls-star-rating {
+          color: $star;
+          font-size: 1rem;
+          padding: unset;
+        }
+      }
+
+      .cls-rating-bar {
+        height: 8px;
+        margin-bottom: 5px;
+
+        .cls-bg-gradients {
+          background: $marked-bg;
+        }
+      }
+
+      .cls-user-info {
+        line-height: 1.2;
+      }
+
+      .cls-user-name {
+        @include font-style(medium, 0.9rem);
+      }
+
+      .cls-user-role {
+        @include font-style(regular, 0.9rem, $gray);
+      }
+
+      .cls-user-time-circle {
+        height: 10px;
+        width: 10px;
+        border-radius: 15px;
+        margin-right: 5px;
+      }
+
+      $circle-styles: (1: ($yellow,
+          $yellow-border,
+        ),
+        2: ($cyan,
+          $cyan-border,
+        ),
+        3: ($bluec,
+          $bluec-border,
+        ),
+        4: ($light-red,
+          $red,
+        ),
+      );
+
+      @each $i,
+      $style in $circle-styles {
+        .cls-user-time-circle#{$i} {
+          background-color: nth($style, 1);
+          border: 1px solid nth($style, 2);
+        }
+      }
+
+      .cls-user-time {
+        @include font-style(regular, 0.9rem, $gray);
+      }
+
+      .cls-action-icons i {
+        cursor: pointer;
+      }
+
+      .cls-text-dangers {
+        color: $red;
+        padding: 9px 14px;
+        border-radius: 15px;
+        background-color: $light-red;
+      }
+
+      .cls-text-success {
+        color: $dark-green;
+        padding: 10px 13px;
+        border-radius: 15px;
+        background-color: $light-green;
+      }
+    }
+
+    i {
+      cursor: pointer;
+    }
+
+    .fa-ellipsis-vertical,
+    .cls-user-avatar {
+      cursor: pointer;
+    }
+
+    .cls-product-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 25px;
+
+      .cls-product-card {
+        background-color: $white;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px $box-shadow;
+        overflow: hidden;
+        @include display(flex);
+        flex-direction: column;
+
+        .cls-product-image {
+          position: relative;
+
+          img {
+            padding: 8px;
+            border-radius: 20px;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+
+          .cls-discount-badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: $red;
+            padding: 12px 5px;
+            border-radius: 30px;
+            @include font-style(bold, 12px, $white);
+          }
+          
+          .cls-favorite-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: $gray-dark;
+            font-size: 24px;
+            cursor: pointer;
+          }
+        }
+
+        .cls-product-info {
+          padding: 25px;
+
+          .cls-product-name {
+            @include font-style(regular, 16px, $gray);
+            margin-bottom:8px;
+          }
+
+          .cls-product-priceand-rating {
+            @include flex-center(row, space-between, center);
+          }
+
+          .cls-product-price {
+            @include display(flex);
+            align-items: center;
+            margin-bottom: 15px;
+
+            .cls-current-price {
+              @include font-style(semibold, 20px, $black);
+            }
+
+            .cls-original-price {
+              text-decoration: line-through;
+              color: $gray;
+              margin-left: 10px;
+              margin-top: 3px;
+              font-size: 11px;
+            }
+          }
+
+          .cls-product-rating {
+            @include display(flex);
+            align-items: center;
+            font-size: 14px;
+
+            .cls-stars {
+              color: $star;
+              margin-right: 5px;
+            }
+            .cls-productratingbarsub{
+              font-size: 13px;
+              color: gray;
+              margin-bottom: 2px;
+          }
+          }
+
+          .cls-add-to-cartandeye {
+            @include display(flex);
+            justify-content: space-between;
+
+            .cls-add-to-cart {
+              width: 77%;
+              border-radius: 10px;
+            }
+
+            .cls-add-to-cart-eye {
+              width: 16%;
+              border-radius: 15px;
+            }
+
+            .cls-add-to-cart,
+            .cls-add-to-cart-eye {
+              background-color: transparent;
+              border: 1px solid $gray-dark;
+              cursor: pointer;
+              font-size: 14px;
+              padding: 10px;
+              @include display(flex);
+              align-items: center;
+              justify-content: center;
+            }
+          }
+        }
+      }
+    }
+
+    .cls-show-more {
+      @include display(block);
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: $blue;
+      color: $white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .cls-userlists {
+      .cls-user-avatar {
+        height: 45px;
+        width: 45px;
+      }
+
+      .cls-e-pageandsearch {
+        @include flex-center(row, space-between, center);
+
+        .cls-e-entriestext {
+          @include flex-center(row, flex-start, center);
+          width: 30%;
+
+          .cls-e-pageset {
+            width: 90%;
+          }
+
+          .cls-e-pageSetText {
+            margin-left: 5px;
+            @include font-style(regular, 0.9rem , $gray);
+            width: 100%;
+          }
+        }
+        .cls-pageSetSearch{
+        .cls-pricefiler-select{
+          &::placeholder{
+          color: $gray-light;
+          }
+        }
+      }
+      }
+
+      .cls-u-table {
+        width: 100%;
+        margin-top: 40px;
+
+        th {
+          position: relative;
+          left: 10px;
+          padding-block: 15px;
+          @include font-style(regular, 0.8rem);
+        }
+
+        td {
+          padding: 10px;
+          background-color: $white;
+          border-block: 8px solid $background-light;
+          color: $blue-dark;
+          font-size: 0.9rem;
+
+          .cls-badge-sucess {
+            background-color: $light-green;
+            color: $dark-green;
+          }
+
+          .cls-badge-danger {
+            background-color: $light-red;
+            color: $red;
+          }
+
+          .cls-u-imgAndRole {
+            @include flex-center(row, flex-start, center);
+
+            .cls-u-Role {
+              @include flex-center(column, flex-start, flex-start);
+
+              span {
+                color: $black;
+              }
+
+              .cls-u-developer {
+                color: $blue;
+              }
+            }
+          }
+        }
+      }
+
+      .cls-pagination {
+        @include flex-center(row, space-between, center);
+        margin-block: 20px;
+        color: $gray;
+        span{
+          font-size: 0.9rem;
+        }
+        button{
+          border: none;
+          font-size: 0.9rem;
+        }
+      }
+
+      .modal-body {
+        #userForm {
+          display: grid;
+          grid-template-columns: repeat(3, 30%);
+          gap: 5%;
+        }
+      }
+    }
+
+    .cls-errorpage {
+      .cls-errorimg {
+        @include flex-center();
+
+        img {
+          height: 300px;
+        }
+      }
+
+      .cls-errorcontent {
+        text-align: center;
+
+        h1 {
+          @include font-style(bold, 1.5rem);
+        }
+
+        span {
+          @include font-style(regular, 1rem, $gray);
+        }
+      }
+
+      .cls-error-moveback-btn {
+        @include flex-center();
+
+        a {
+          text-decoration: none;
+
+          button {
+            @include flex-center();
+            background-color: $bluec-border;
+            color: $white;
+            border: none;
+            border-radius: 8px;
+            padding: 6px 12px;
+            margin-top: 20px;
+
+            i {
+              font-size: 0.7rem;
+            }
+
+            span {
+              @include font-style(semibold, 0.7rem, $white);
+              margin-left: 5px;
+            }
+          }
+        }
+      }
+
+      .cls-error-logo-border {
+        border-bottom: 1px solid $gray-muted;
+        margin-block: 20px;
+
+        .cls-error-logo {
+          height: 20px;
+          margin-block: 30px;
+        }
+      }
+    }
+
+    footer {
+      margin-bottom: 0px;
+      margin-top: 25px;
+
+      div {
+        font-size: 0.9rem;
+
+        span {
+          cursor: pointer;
+        }
+      }
+
+      .cls-error-footer {
+        .cls-e-LeftLine {
+          padding-inline: 20px;
+          border-inline: 1px solid $gray-muted;
+        }
+      }
+    }
+
+    ::selection {
+      background-color: $skyblue;
+    }
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+} -->
