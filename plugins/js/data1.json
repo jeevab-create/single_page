@@ -63,7 +63,7 @@
           "increase": 80,
           "extra": 35000,
           "period": "daily",
-          "img": "../assets/assets-dashboard/img-status-4.svg"
+          "img": "./assets/assets-dashboard/img-status-4.svg"
         },
         {
           "title": "Monthly Sales",
@@ -71,7 +71,7 @@
           "increase": 70,
           "extra": 35000,
           "period": "Monthly",
-          "img": "../assets/assets-dashboard/img-status-5.svg"
+          "img": "./assets/assets-dashboard/img-status-5.svg"
         },
         {
           "title": "Yearly Sales",
@@ -79,13 +79,13 @@
           "increase": null,
           "extra": 35000,
           "period": "Daily",
-          "img": "../assets/assets-dashboard/img-status-6.svg"
+          "img": "./assets/assets-dashboard/img-status-6.svg"
         }
       ],
       "statsData": [
         {
           "platform": "facebook",
-          "icon": "../assets/assets-dashboard/img-facebook.svg",
+          "icon": "./assets/assets-dashboard/img-facebook.svg",
           "img": "../assets/assets-dashboard/img-status-7.svg",
           "color": "#4267B2",
           "likes": 12281,
@@ -95,8 +95,8 @@
         },
         {
           "platform": "google",
-          "icon": "../assets/assets-dashboard/img-google.svg",
-          "img": "../assets/assets-dashboard/img-status-8.svg",
+          "icon": "./assets/assets-dashboard/img-google.svg",
+          "img": "./assets/assets-dashboard/img-status-8.svg",
           "color": "#DB4437",
           "likes": 12281,
           "increase": 5.9,
@@ -105,8 +105,8 @@
         },
         {
           "platform": "twitter",
-          "icon": "../assets/assets-dashboard/img-twitter.svg",
-          "img": "../assets/assets-dashboard/img-status-9.svg",
+          "icon": "./assets/assets-dashboard/img-twitter.svg",
+          "img": "./assets/assets-dashboard/img-status-9.svg",
           "color": "#1DA1F2",
           "likes": 12281,
           "increase": 4.2,
@@ -152,7 +152,7 @@
         "originalPrice": 399,
         "rating": 4.5,
         "discount": 30,
-        "image": "../assets/assets-products/img-prod-1.jpg"
+        "image": "./assets/assets-products/img-prod-1.jpg"
       },
       {
         "name": "Black Heels",
@@ -160,7 +160,7 @@
         "originalPrice": 399,
         "rating": 4.5,
         "discount": 30,
-        "image": "../assets/assets-products/img-prod-2.jpg"
+        "image": "./assets/assets-products/img-prod-2.jpg"
       },
       {
         "name": "Teal Oxfords",
@@ -175,14 +175,14 @@
         "originalPrice": 399,
         "rating": 4.5,
         "discount": 30,
-        "image": "../assets/assets-products/img-prod-4.jpg"
+        "image": "./assets/assets-products/img-prod-4.jpg"
       },
       {
         "name": "Yellow Heels",
         "price": 299,
         "originalPrice": 399,
         "rating": 4.5,
-        "image": "../assets/assets-products/img-prod-5.jpg"
+        "image": "./assets/assets-products/img-prod-5.jpg"
       },
       {
         "name": "Gold Loafers",
@@ -190,14 +190,14 @@
         "originalPrice": 399,
         "rating": 4.5,
         "discount": 30,
-        "image": "../assets/assets-products/img-prod-6.jpg"
+        "image": "./assets/assets-products/img-prod-6.jpg"
       },
       {
         "name": "Red Sneakers",
         "price": 299,
         "originalPrice": 399,
         "rating": 4.5,
-        "image": "../assets/assets-products/img-prod-7.jpg"
+        "image": "./assets/assets-products/img-prod-7.jpg"
       },
       {
         "name": "White Bridal Shoes",
@@ -205,14 +205,14 @@
         "originalPrice": 399,
         "rating": 4.5,
         "discount": 30,
-        "image": "../assets/assets-products/img-prod-8.jpg"
+        "image": "./assets/assets-products/img-prod-8.jpg"
       },
       {
         "name": "Nude Pumps",
         "price": 299,
         "originalPrice": 399,
         "rating": 4.5,
-        "image": "../assets/assets-products/img-prod-9.jpg"
+        "image": "./assets/assets-products/img-prod-9.jpg"
       },
       {
         "name": "Gray Sneakers",
@@ -220,7 +220,7 @@
         "originalPrice": 399,
         "rating": 4.5,
         "discount": 30,
-        "image": "../assets/assets-products/img-prod-1.jpg"
+        "image": "./assets/assets-products/img-prod-1.jpg"
       },
       {
         "name": "Black Heels",
@@ -228,14 +228,14 @@
         "originalPrice": 399,
         "rating": 4.5,
         "discount": 30,
-        "image": "../assets/assets-products/img-prod-2.jpg"
+        "image": "./assets/assets-products/img-prod-2.jpg"
       },
       {
         "name": "Teal Oxfords",
         "price": 299,
         "originalPrice": 399,
         "rating": 4.5,
-        "image": "../assets/assets-products/img-prod-3.jpg"
+        "image": "./assets/assets-products/img-prod-3.jpg"
       },
       {
         "name": "Blue Sneakers",
@@ -250,7 +250,7 @@
         "price": 299,
         "originalPrice": 399,
         "rating": 4.5,
-        "image": "../assets/assets-products/img-prod-5.jpg"
+        "image": "./assets/assets-products/img-prod-5.jpg"
       },
       {
         "name": "Gold Loafers",
@@ -258,14 +258,14 @@
         "originalPrice": 399,
         "rating": 4.5,
         "discount": 30,
-        "image": "../assets/assets-products/img-prod-6.jpg"
+        "image": "./assets/assets-products/img-prod-6.jpg"
       },
       {
         "name": "Red Sneakers",
         "price": 299,
         "originalPrice": 399,
         "rating": 4.5,
-        "image": "../assets/assets-products/img-prod-7.jpg"
+        "image": "./assets/assets-products/img-prod-7.jpg"
       },
       {
         "name": "White Bridal Shoes",
@@ -273,14 +273,14 @@
         "originalPrice": 399,
         "rating": 4.5,
         "discount": 30,
-        "image": "../assets/assets-products/img-prod-8.jpg"
+        "image": "./assets/assets-products/img-prod-8.jpg"
       },
       {
         "name": "Nude Pumps",
         "price": 299,
         "originalPrice": 399,
         "rating": 4.5,
-        "image": "../assets/assets-products/img-prod-9.jpg"
+        "image": "./assets/assets-products/img-prod-9.jpg"
       },
       {
         "name": "Gray Sneakers",
@@ -288,7 +288,7 @@
         "originalPrice": 399,
         "rating": 4.5,
         "discount": 30,
-        "image": "../assets/assets-products/img-prod-1.jpg"
+        "image": "./assets/assets-products/img-prod-1.jpg"
       },
       {
         "name": "Black Heels",
@@ -296,14 +296,14 @@
         "originalPrice": 399,
         "rating": 4.5,
         "discount": 30,
-        "image": "../assets/assets-products/img-prod-2.jpg"
+        "image": "./assets/assets-products/img-prod-2.jpg"
       },
       {
         "name": "Teal Oxfords",
         "price": 299,
         "originalPrice": 399,
         "rating": 4.5,
-        "image": "../assets/assets-products/img-prod-3.jpg"
+        "image": "./assets/assets-products/img-prod-3.jpg"
       }
     ],
     "users": [
