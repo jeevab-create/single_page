@@ -1,0 +1,28 @@
+@font-face {
+  font-family: PublicSans-Bold;
+  src: url("../fonts/PublicSans-Bold/PublicSans-Bold.eot");
+  src: url("../fonts/PublicSans-Bold/PublicSans-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/PublicSans-Bold/PublicSans-Bold.woff") format("woff"), url("../fonts/PublicSans-Bold/PublicSans-Bold.ttf") format("truetype"), url("../fonts/PublicSans-Bold/PublicSans-Bold.svg#PublicSans-Bold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: PublicSans-Medium;
+  src: url("../fonts/PublicSans-Medium/PublicSans-Medium.eot");
+  src: url("../fonts/PublicSans-Medium/PublicSans-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/PublicSans-Medium/PublicSans-Medium.woff") format("woff"), url("../fonts/PublicSans-Medium/PublicSans-Medium.ttf") format("truetype"), url("../fonts/PublicSans-Medium/PublicSans-Medium.svg#PublicSans-Medium") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: PublicSans-Regular;
+  src: url("../fonts/PublicSans-Regular/PublicSans-Regular.eot");
+  src: url("../fonts/PublicSans-Regular/PublicSans-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/PublicSans-Regular/PublicSans-Regular.woff") format("woff"), url("../fonts/PublicSans-Regular/PublicSans-Regular.ttf") format("truetype"), url("../fonts/PublicSans-Regular/PublicSans-Regular.svg#PublicSans-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: PublicSans-SemiBold;
+  src: url("../fonts/PublicSans-SemiBold/PublicSans-SemiBold.eot");
+  src: url("../fonts/PublicSans-SemiBold/PublicSans-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/PublicSans-SemiBold/PublicSans-SemiBold.woff") format("woff"), url("../fonts/PublicSans-SemiBold/PublicSans-SemiBold.ttf") format("truetype"), url("../fonts/PublicSans-SemiBold/PublicSans-SemiBold.svg#PublicSans-SemiBold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}

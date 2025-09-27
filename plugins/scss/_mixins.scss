@@ -1,0 +1,20 @@
+@mixin transition($properties: all, $duration: 0.3s, $timing: ease) {
+  transition: $properties $duration $timing;
+}
+
+@mixin flex-center($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin font-style($family, $size, $color: inherit) {
+  font-family: map-get($fonts, $family);
+  font-size: $size;
+  color: $color;
+}
+
+@mixin display($type) {
+  display: $type;
+}

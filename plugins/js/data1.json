@@ -1,0 +1,322 @@
+{
+    "menuItems": [
+      {
+        "heading": "Navigation",
+        "title": "Dashboard",
+        "icon": "fas fa-tachometer-alt",
+        "submenu": [
+          { "title": "Helpdesk", "href": "javascript:;", "icon": "fas fa-headset" },
+          { "title": "Analytics", "href": "javascript:;", "icon": "fas fa-chart-line" },
+          { "title": "Affiliate", "href": "javascript:;", "icon": "fas fa-link" },
+          { "title": "Finance", "href": "javascript:;", "icon": "fas fa-dollar-sign" },
+          { "title": "Invoice", "href": "javascript:;", "icon": "fas fa-file-invoice" }
+        ]
+      },
+      {
+        "title": "Home",
+        "icon": "fa-solid fa-house",
+        "href": "javascript:;",
+        "onclick" : "switchPage('dashboard')"
+      },
+      {
+        "title": "Error",
+        "icon": "fa-solid fa-exclamation-triangle",
+        "href": "javascript:;",
+        "onclick" : "switchPage('error')"
+      },
+      {
+        "title": "Products",
+        "icon": "fa-solid fa-box",
+        "href": "javascript:;",
+        "onclick" : "switchPage('product')"
+      },
+      {
+        "title": "Userlist",
+        "icon": "fa-solid fa-users",
+        "href": "javascript:;",
+        "onclick" : "switchPage('userList')"
+      },
+      {
+        "title": "Layout",
+        "icon": "fas fa-th-large",
+        "href": "javascript:;"
+      },
+      {
+        "heading": "Widget",
+        "title": "Settings",
+        "icon": "fas fa-cogs",
+        "submenu": [
+          { "title": "Vertical sidebar", "href": "javascript:;", "type": "vertical", "icon": "fas fa-tachometer-alt" },
+          { "title": "Horizontal sidebar", "href": "javascript:;", "type": "horizontal", "icon": "fas fa-tachometer-alt" }
+        ]
+      },
+      {
+        "title": "Statistics",
+        "icon": "fa-solid fa-chart-bar",
+        "href": "javascript:;"
+      }
+    ],
+    "salesData": [
+        {
+          "title": "Daily Sales",
+          "amount": 249.95,
+          "increase": 80,
+          "extra": 35000,
+          "period": "daily",
+          "img": "../assets/assets-dashboard/img-status-4.svg"
+        },
+        {
+          "title": "Monthly Sales",
+          "amount": 249.95,
+          "increase": 70,
+          "extra": 35000,
+          "period": "Monthly",
+          "img": "../assets/assets-dashboard/img-status-5.svg"
+        },
+        {
+          "title": "Yearly Sales",
+          "amount": 249.95,
+          "increase": null,
+          "extra": 35000,
+          "period": "Daily",
+          "img": "../assets/assets-dashboard/img-status-6.svg"
+        }
+      ],
+      "statsData": [
+        {
+          "platform": "facebook",
+          "icon": "../assets/assets-dashboard/img-facebook.svg",
+          "img": "../assets/assets-dashboard/img-status-7.svg",
+          "color": "#4267B2",
+          "likes": 12281,
+          "increase": 7.2,
+          "target": 35098,
+          "duration": 3539
+        },
+        {
+          "platform": "google",
+          "icon": "../assets/assets-dashboard/img-google.svg",
+          "img": "../assets/assets-dashboard/img-status-8.svg",
+          "color": "#DB4437",
+          "likes": 12281,
+          "increase": 5.9,
+          "target": 35098,
+          "duration": 3539
+        },
+        {
+          "platform": "twitter",
+          "icon": "../assets/assets-dashboard/img-twitter.svg",
+          "img": "../assets/assets-dashboard/img-status-9.svg",
+          "color": "#1DA1F2",
+          "likes": 12281,
+          "increase": 4.2,
+          "target": 35098,
+          "duration": 3539
+        }
+      ],
+      "ratingData": {
+        "averageRating": 4.7,
+        "totalRatings": 5,
+        "ratingCounts": [384, 145, 24, 1, 0]
+      },
+      "usersData": [
+        {
+          "name": "Quinn Flynn",
+          "role": "Android developer",
+          "time": "11 may 12:30",
+          "avatar": "./assets/assets-dashboard/avatar-1.jpg"
+        },
+        {
+          "name": "Garrett Winters",
+          "role": "Android developer",
+          "time": "11 may 12:30",
+          "avatar": "./assets/assets-dashboard/avatar-1.jpg"
+        },
+        {
+          "name": "Ashton Cox",
+          "role": "Android developer",
+          "time": "11 may 12:30",
+          "avatar": "./assets/assets-dashboard/avatar-1.jpg"
+        },
+        {
+          "name": "Cedric Kelly",
+          "role": "Android developer",
+          "time": "11 may 12:30",
+          "avatar": "./assets/assets-dashboard/avatar-1.jpg"
+        }
+      ],
+    "products": [
+      {
+        "name": "Gray Sneakers",
+        "price": 299,
+        "originalPrice": 399,
+        "rating": 4.5,
+        "discount": 30,
+        "image": "../assets/assets-products/img-prod-1.jpg"
+      },
+      {
+        "name": "Black Heels",
+        "price": 299,
+        "originalPrice": 399,
+        "rating": 4.5,
+        "discount": 30,
+        "image": "../assets/assets-products/img-prod-2.jpg"
+      },
+      {
+        "name": "Teal Oxfords",
+        "price": 299,
+        "originalPrice": 399,
+        "rating": 4.5,
+        "image": "../assets/assets-products/img-prod-3.jpg"
+      },
+      {
+        "name": "Blue Sneakers",
+        "price": 299,
+        "originalPrice": 399,
+        "rating": 4.5,
+        "discount": 30,
+        "image": "../assets/assets-products/img-prod-4.jpg"
+      },
+      {
+        "name": "Yellow Heels",
+        "price": 299,
+        "originalPrice": 399,
+        "rating": 4.5,
+        "image": "../assets/assets-products/img-prod-5.jpg"
+      },
+      {
+        "name": "Gold Loafers",
+        "price": 299,
+        "originalPrice": 399,
+        "rating": 4.5,
+        "discount": 30,
+        "image": "../assets/assets-products/img-prod-6.jpg"
+      },
+      {
+        "name": "Red Sneakers",
+        "price": 299,
+        "originalPrice": 399,
+        "rating": 4.5,
+        "image": "../assets/assets-products/img-prod-7.jpg"
+      },
+      {
+        "name": "White Bridal Shoes",
+        "price": 299,
+        "originalPrice": 399,
+        "rating": 4.5,
+        "discount": 30,
+        "image": "../assets/assets-products/img-prod-8.jpg"
+      },
+      {
+        "name": "Nude Pumps",
+        "price": 299,
+        "originalPrice": 399,
+        "rating": 4.5,
+        "image": "../assets/assets-products/img-prod-9.jpg"
+      },
+      {
+        "name": "Gray Sneakers",
+        "price": 299,
+        "originalPrice": 399,
+        "rating": 4.5,
+        "discount": 30,
+        "image": "../assets/assets-products/img-prod-1.jpg"
+      },
+      {
+        "name": "Black Heels",
+        "price": 299,
+        "originalPrice": 399,
+        "rating": 4.5,
+        "discount": 30,
+        "image": "../assets/assets-products/img-prod-2.jpg"
+      },
+      {
+        "name": "Teal Oxfords",
+        "price": 299,
+        "originalPrice": 399,
+        "rating": 4.5,
+        "image": "../assets/assets-products/img-prod-3.jpg"
+      },
+      {
+        "name": "Blue Sneakers",
+        "price": 299,
+        "originalPrice": 399,
+        "rating": 4.5,
+        "discount": 30,
+        "image": "../assets/assets-products/img-prod-4.jpg"
+      },
+      {
+        "name": "Yellow Heels",
+        "price": 299,
+        "originalPrice": 399,
+        "rating": 4.5,
+        "image": "../assets/assets-products/img-prod-5.jpg"
+      },
+      {
+        "name": "Gold Loafers",
+        "price": 299,
+        "originalPrice": 399,
+        "rating": 4.5,
+        "discount": 30,
+        "image": "../assets/assets-products/img-prod-6.jpg"
+      },
+      {
+        "name": "Red Sneakers",
+        "price": 299,
+        "originalPrice": 399,
+        "rating": 4.5,
+        "image": "../assets/assets-products/img-prod-7.jpg"
+      },
+      {
+        "name": "White Bridal Shoes",
+        "price": 299,
+        "originalPrice": 399,
+        "rating": 4.5,
+        "discount": 30,
+        "image": "../assets/assets-products/img-prod-8.jpg"
+      },
+      {
+        "name": "Nude Pumps",
+        "price": 299,
+        "originalPrice": 399,
+        "rating": 4.5,
+        "image": "../assets/assets-products/img-prod-9.jpg"
+      },
+      {
+        "name": "Gray Sneakers",
+        "price": 299,
+        "originalPrice": 399,
+        "rating": 4.5,
+        "discount": 30,
+        "image": "../assets/assets-products/img-prod-1.jpg"
+      },
+      {
+        "name": "Black Heels",
+        "price": 299,
+        "originalPrice": 399,
+        "rating": 4.5,
+        "discount": 30,
+        "image": "../assets/assets-products/img-prod-2.jpg"
+      },
+      {
+        "name": "Teal Oxfords",
+        "price": 299,
+        "originalPrice": 399,
+        "rating": 4.5,
+        "image": "../assets/assets-products/img-prod-3.jpg"
+      }
+    ],
+    "users": [
+        { "id": 1, "name": "Quinn Flynn", "position": "Support Lead", "office": "Edinburgh", "age": 61, "startDate": "2011-04-25", "status": "Active" },
+        { "id": 2, "name": "Garrett Winters", "position": "Accountant", "office": "Tokyo", "age": 63, "startDate": "2011-07-25", "status": "Disabled" },
+        { "id": 3, "name": "Ashton Cox", "position": "Junior Technical Author", "office": "San Francisco", "age": 66, "startDate": "2009-01-12", "status": "Disabled" },
+        { "id": 4, "name": "Cedric Kelly", "position": "Senior Javascript Developer", "office": "Edinburgh", "age": 22, "startDate": "2012-03-29", "status": "Active" },
+        { "id": 5, "name": "Airi Satou", "position": "Accountant", "office": "Tokyo", "age": 33, "startDate": "2008-11-28", "status": "Active" },
+        { "id": 6, "name": "Ashton Cox", "position": "Junior Technical Author", "office": "San Francisco", "age": 66, "startDate": "2009-01-12", "status": "Disabled" },
+        { "id": 7, "name": "Cedric Kelly", "position": "Senior Javascript Developer", "office": "Edinburgh", "age": 22, "startDate": "2012-03-29", "status": "Active" },
+        { "id": 8, "name": "Airi Satou", "position": "Accountant", "office": "Tokyo", "age": 33, "startDate": "2008-11-28", "status": "Active" },
+        { "id": 9, "name": "Ashton Cox", "position": "Junior Technical Author", "office": "San Francisco", "age": 66, "startDate": "2009-01-12", "status": "Disabled" },
+        { "id": 10, "name": "Cedric Kelly", "position": "Senior Javascript Developer", "office": "Edinburgh", "age": 22, "startDate": "2012-03-29", "status": "Active" }
+      ]
+  }
+  

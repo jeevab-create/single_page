@@ -1,0 +1,14 @@
+%card-base {
+  border-radius: 15px;
+  box-shadow: 0 4px 10px $box-shadow;
+  background-color: $white;
+}
+
+%icon-base {
+  border-radius: 8px;
+  padding: 10px;
+  height: 34px;
+  width: 37px;
+  margin-block: 10px;
+  font-size: 1rem;
+}
